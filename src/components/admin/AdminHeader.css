@@ -1,0 +1,23 @@
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 25px;
+  background: #1e1e2f;
+  color: white;
+}
+
+.admin-header nav {
+  display: flex;
+  gap: 15px;
+}
+
+.admin-header a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.admin-header a:hover {
+  text-decoration: underline;
+}

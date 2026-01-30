@@ -1,0 +1,83 @@
+
+.folder-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.flower-folder {
+  width: 150px;
+  height: 150px;
+  position: relative;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.flower-folder:hover {
+  transform: scale(1.05);
+}
+
+.petal {
+  width: 80px;
+  height: 80px;
+  background: #AE8625;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.petal.top {
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.petal.bottom {
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.petal.left {
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.petal.right {
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.folder-center {
+  width: 90px;
+  height: 90px;
+  background: #F7EF8A;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  padding: 5px;
+}
+
+.delete-folder-btn {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background: #EDC967;
+  border: none;
+  border-radius: 50%;
+  color: white;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+}

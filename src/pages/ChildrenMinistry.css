@@ -1,0 +1,181 @@
+/* ChildrenMinistry.css - images, videos, folders, admin small utilities */
+
+.children-container {
+  padding: 24px;
+  background: #f8f9fa;
+  min-height: 80vh;
+}
+
+.page-subtitle {
+  color: #555;
+  margin-bottom: 18px;
+}
+
+.image-section, .video-section, .syllabus-section {
+  background: #fff;
+  padding: 16px;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+  margin-bottom: 20px;
+}
+
+.images-grid {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.images-grid img {
+  width: 30%;
+  max-width: 320px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 14px;
+}
+
+.video-card input {
+  width: 100%;
+  margin-top: 8px;
+  padding: 6px;
+}
+
+/* Folders grid */
+.folders-grid, .public-folders {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+/* Flower-shaped folder outer border (simple circular styled outer shape) */
+.flower-folder, .folder-card {
+  width: 160px;
+  text-align: center;
+}
+
+.flower-outer {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  border: 6px solid #e6b800; /* outer shape color */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 8px;
+  position: relative;
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+
+.folder-name {
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: 8px;
+}
+
+/* Folder files list */
+.folder-files ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.folder-files li {
+  margin-bottom: 6px;
+}
+
+.folder-files a {
+  text-decoration: none;
+  color: #1E2B45;
+}
+
+/* Admin-specific small helpers used in admin page */
+.admin-container .images-row, .images-row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.image-card {
+  width: 150px;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  position: relative;
+}
+
+.image-card img {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+}
+
+.image-actions {
+  display: flex;
+  justify-content: center;
+  padding: 8px;
+  gap: 8px;
+}
+
+.admin-section { margin-bottom: 24px; padding-bottom: 8px; border-bottom: 1px solid #eee; }
+
+.admin-list { list-style: none; padding-left: 0; }
+.admin-list li { display:flex; justify-content:space-between; align-items:center; padding:8px 0; border-bottom:1px dashed #eee; }
+.admin-form input { margin-right: 8px; padding: 6px; }
+
+/* ChildrenMinistry.css (append) */
+
+.folders-section { margin-top: 30px; background: #fff; padding: 18px; border-radius: 10px; box-shadow: 0 3px 10px rgba(0,0,0,0.06); }
+.folders-header { display:flex; justify-content:space-between; align-items:center; margin-bottom:12px; }
+.folder-grid { display:flex; gap:18px; flex-wrap:wrap; align-items:flex-start; }
+
+/* Flower-shaped outer border wrapper */
+.folder-card { width: 150px; height: 150px; cursor:pointer; display:flex; align-items:center; justify-content:center; }
+.flower-border {
+  width: 140px; height:140px;
+  display:flex; align-items:center; justify-content:center;
+  /* Use an SVG as background to create petal outline */
+  background-image: url('data:image/svg+xml;utf8,\
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">\
+    <g fill="none" stroke="%231E2B45" stroke-width="3">\
+      <path d="M60 6 C74 10 84 20 90 34 C96 48 92 64 78 74 C64 84 48 84 36 76 C24 68 12 56 12 40 C12 24 38 4 60 6 Z"/>\
+    </g>\
+  </svg>');
+  background-repeat:no-repeat;
+  background-position:center;
+  background-size:100px 100px;
+  border-radius:50%;
+  transition: transform .18s ease, box-shadow .18s ease;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+/* center area inside flower */
+.folder-center { width: 78%; height: 78%; background: #fff; border-radius: 10px; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:6px; }
+.folder-name { font-weight:600; font-size:14px; letter-spacing:0.6px; color:#1e2b45; }
+.folder-open { margin-top:6px; color:#1e2b45; font-size:14px; }
+
+/* hover */
+.folder-card:hover .flower-border { transform: translateY(-6px) scale(1.03); box-shadow: 0 8px 18px rgba(0,0,0,0.12); }
+
+/* modal */
+.folder-modal { position:fixed; inset:0; background: rgba(0,0,0,0.45); display:flex; align-items:center; justify-content:center; z-index:1000; }
+.folder-modal-inner { width:720px; background:#fff; border-radius:8px; padding:16px; box-shadow:0 10px 40px rgba(0,0,0,0.3); max-height:80vh; overflow:auto; }
+.folder-modal-header { display:flex; justify-content:space-between; align-items:center; gap:12px; margin-bottom:12px; }
+.upload-label { background:#1E2B45; color:#fff; padding:8px 10px; border-radius:6px; cursor:pointer; margin-right:8px; display:inline-block; }
+.danger { background:#e85454; color:#fff; padding:8px 10px; border-radius:6px; border:none; cursor:pointer; margin-left:8px; }
+.folder-files { border-top:1px solid #eee; padding-top:12px; }
+.file-row { display:flex; justify-content:space-between; align-items:center; padding:8px 0; border-bottom:1px dashed #f1f1f1; }
+.file-actions a, .file-actions button { margin-left:10px; text-decoration:none; color:#1E2B45; background:none; border:none; cursor:pointer; }
+.muted { color:#666; }
+
+
+  

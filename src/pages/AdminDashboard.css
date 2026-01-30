@@ -1,0 +1,21 @@
+.admin-dashboard {
+  padding: 30px;
+  text-align: center;
+}
+
+.admin-links {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.admin-links a {
+  padding: 10px 14px;
+  background: #1e2b45;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  width: 250px;
+  margin: 0 auto;
+}

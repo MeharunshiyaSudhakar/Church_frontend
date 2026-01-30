@@ -1,0 +1,99 @@
+/* Messages Page */
+.messages-container {
+  padding: 40px;
+  background: #000000;
+  min-height: 80vh;
+}
+
+/* Grid */
+.folders-grid {
+  display: flex;
+  gap: 22px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+/* Folder Card */
+.folder-card {
+  width: 150px;
+  height: 150px;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Flower Border */
+.flower-border {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background-image: url('data:image/svg+xml;utf8,\
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">\
+    <g fill="none" stroke="%23e6b800" stroke-width="4">\
+      <path d="M60 6 C74 10 84 20 90 34 C96 48 92 64 78 74 C64 84 48 84 36 76 C24 68 12 56 12 40 C12 24 38 4 60 6 Z"/>\
+    </g>\
+  </svg>');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 110px 110px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.12);
+}
+
+.folder-card:hover .flower-border {
+  transform: translateY(-6px) scale(1.04);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.18);
+}
+
+/* Center */
+.folder-center {
+  width: 78%;
+  height: 78%;
+  background: #fff;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 8px;
+}
+
+.folder-name {
+  font-weight: 700;
+  font-size: 14px;
+  color: #1e2b45;
+  letter-spacing: 0.5px;
+}
+
+.folder-open {
+  font-size: 13px;
+  margin-top: 6px;
+  color: #666;
+}
+
+/* Delete Button (Admin) */
+.delete-folder-btn {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  background: #e85454;
+  border: none;
+  border-radius: 50%;
+  color: #070101;
+  width: 26px;
+  height: 26px;
+  font-size: 14px;
+  cursor: pointer;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.25);
+}
+
+.delete-folder-btn:hover {
+  background: #c9302c;
+}

@@ -1,0 +1,36 @@
+.admin-container {
+  padding: 20px;
+}
+
+.admin-form {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.admin-form input {
+  padding: 8px;
+  min-width: 200px;
+}
+
+.admin-form button {
+  padding: 8px 14px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.admin-list {
+  list-style: none;
+  padding: 0;
+}
+
+.admin-list li {
+  display: flex;
+  justify-content: space-between;
+  background: #f3f4f6;
+  padding: 10px;
+  margin-bottom: 8px;
+}
